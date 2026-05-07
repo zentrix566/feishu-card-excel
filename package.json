@@ -1,0 +1,29 @@
+{
+  "name": "feishu-card-excel",
+  "version": "1.0.0",
+  "description": "feishu-card-excel",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "send-card": "node examples/send-card.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zentrix566/feishu-card-excel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zentrix566/feishu-card-excel/issues"
+  },
+  "homepage": "https://github.com/zentrix566/feishu-card-excel#readme",
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.62.1",
+    "axios": "^1.16.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
