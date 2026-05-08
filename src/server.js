@@ -13,11 +13,12 @@ app.use(express.json());
 app.post('/webhook/card', async (req, res) => {
   console.log('收到回调请求:', JSON.stringify(req.body, null, 2));
 
-  const { header, event } = req.body;
+  const { header, event, challenge, type } = req.body;
 
-  // 飞书 URL 验证
-  if (header && header.event_type === 'url_verification') {
-    return res.json({ challenge: req.body.challenge });
+  // 飞书 URL 验证（兼容多种格式）
+  if (challenge || (header && header.event_type === 'url_verification') || type === 'url_verification') {
+    console.log('URL 验证请求，返回 challenge:', challenge);
+    return res.json({ challenge });
   }
 
   // 卡片按钮点击事件

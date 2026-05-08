@@ -15,7 +15,7 @@ async function markRecordCompleted(recordId, handlerUserId) {
   };
 
   if (handlerUserId) {
-    fields[handlerField] = {
+    fields[config.bitable.handlerField] = {
       id: handlerUserId
     };
   }
